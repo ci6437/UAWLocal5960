@@ -17,8 +17,6 @@ var bgColor = "blue";
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link  rel="import" href="nav.html" id="navbar">
     <link  rel="import" href="Home.html" id="home">
-    <link  rel="import" href="faq.html" id="faq">
-    <link  rel="import" href="eap.html" id="eap">
     <link  rel="import" href="Photos.html" id="photos">
     <link  rel="import" href="Calendar.html" id="calendar">
     <link  rel="import" href="Leadership.html" id="leadership">
@@ -126,9 +124,8 @@ var bgColor = "blue";
             case "eap":
                 var getImport = document.querySelector('link[id=eap]');
                 var getDoc = getImport.import;
-                var newHTML= getDoc.getElementsByClassName("eapeap")[0].innerHTML;
-                document.getElementById("content-container").inneaperHTML = newHTML;
-                alert("eap");
+                var newHTML= getDoc.getElementsByClassName("eap")[0].innerHTML;
+                document.getElementById("content-container").innerHTML = newHTML;
                 break;
             case "adapt":
                 var getImport = document.querySelector('link[id=adapt]');
@@ -182,7 +179,7 @@ var bgColor = "blue";
                 var getImport = document.querySelector('link[id=faq]');
                 var getDoc = getImport.import;
                 var newHTML= getDoc.getElementsByClassName("faq")[0].innerHTML;
-                document.getElementById("content-container").inneaperHTML = newHTML;
+                document.getElementById("content-container").innerHTML = newHTML;
                 break;   
             default:
                 alert("content switch error!");
