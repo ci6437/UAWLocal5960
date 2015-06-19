@@ -1,0 +1,11 @@
+<html>
+<script type="text/javascript">
+if(typeof(Storage) === "undefined") {
+    alert("Sorry your browaer is unsupported");
+} 
+sessionStorage.setItem("location", "home");
+
+var string =sessionStorage.getItem("location");
+alert(string);
+</script>
+</html>
