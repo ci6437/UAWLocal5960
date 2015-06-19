@@ -9,7 +9,7 @@ if(sessionStorage.getItem("location")===null){
 }
 var bgColor = "blue";
 </script>
-    <title>Chris Colón</title>
+    <title>UAW Local 5960</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -17,6 +17,10 @@ var bgColor = "blue";
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link  rel="import" href="nav.html" id="navbar">
     <link  rel="import" href="Home.html" id="home">
+    <link  rel="import" href="Photos.html" id="photos">
+    <link  rel="import" href="Calendar.html" id="calendar">
+    <link  rel="import" href="Leadership.html" id="leadership">
+    <link  rel="import" href="Benefits.html" id="benefits">
     <link  rel="import" href="Photos.html" id="photos">
     <link  rel="import" href="Calendar.html" id="calendar">
 </head>
@@ -29,24 +33,31 @@ var bgColor = "blue";
         document.write(getDoc.getElementsByClassName("navbar-dynamic")[0].innerHTML);
     </script>
     </div>
-
-
-
-
-
-
-    <p></p>
      <div class="Container" id="content-container"> 
         <script type="text/javascript">switch (sessionStorage.getItem("location")){
             case "home":
                 var getImport = document.querySelector('link[id=home]');
                 var getDoc = getImport.import;
-                document.write(getDoc.getElementsByClassName("home")[0].innerHTML);
+                var newHTML= getDoc.getElementsByClassName("home")[0].innerHTML;
+                document.getElementById("content-container").innerHTML = newHTML;
                 break;
             case "photos":
                 var getImport = document.querySelector('link[id=photos]');
                 var getDoc = getImport.import;
-                 document.write(getDoc.getElementsByClassName("photos")[0].innerHTML);
+                var newHTML= getDoc.getElementsByClassName("photos")[0].innerHTML;
+                document.getElementById("content-container").innerHTML = newHTML;
+                break;
+            case "calendar":
+                var getImport = document.querySelector('link[id=calendar]');
+                var getDoc = getImport.import;
+                var newHTML= getDoc.getElementsByClassName("calendar")[0].innerHTML;
+                document.getElementById("content-container").innerHTML = newHTML;
+                break; 
+            case "benefits":
+                var getImport = document.querySelector('link[id=benefits]');
+                var getDoc = getImport.import;
+                var newHTML= getDoc.getElementsByClassName("benefits")[0].innerHTML;
+                document.getElementById("content-container").innerHTML = newHTML;
                 break;
             default:
                 alert("content switch error!");
@@ -84,10 +95,10 @@ var bgColor = "blue";
                 var newHTML= getDoc.getElementsByClassName("benefits")[0].innerHTML;
                 document.getElementById("content-container").innerHTML = newHTML;
                 break;
-            case "photos":
-                var getImport = document.querySelector('link[id=photos]');
+            case "leadership":
+                var getImport = document.querySelector('link[id=leadership]');
                 var getDoc = getImport.import;
-                var newHTML= getDoc.getElementsByClassName("photos")[0].innerHTML;
+                var newHTML= getDoc.getElementsByClassName("leadership")[0].innerHTML;
                 document.getElementById("content-container").innerHTML = newHTML;
                 break;
             case "calendar":
