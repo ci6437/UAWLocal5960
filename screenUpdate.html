@@ -1,0 +1,115 @@
+<div  id="screenUpdate">
+    <script type="text/javascript">
+        function screenUpdate(){
+            switch (sessionStorage.getItem("location")){
+                case "home":
+                    var getImport = document.querySelector('link[id=home]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("home")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break;
+                case "photos":
+                    var getImport = document.querySelector('link[id=photos]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("photos")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break;
+                case "calendar":
+                    var getImport = document.querySelector('link[id=calendar]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("calendar")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break; 
+                case "benefits":
+                    var getImport = document.querySelector('link[id=benefits]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("benefits")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break;
+                case "leadership":
+                    var getImport = document.querySelector('link[id=leadership]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("leadership")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break;
+                case "calendar":
+                    var getImport = document.querySelector('link[id=calendar]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("calendar")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break;
+                case "committees":
+                    var getImport = document.querySelector('link[id=committees]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("committees")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break;
+                case "eap":
+                    var getImport = document.querySelector('link[id=eap]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("eap")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break;
+                case "adapt":
+                    var getImport = document.querySelector('link[id=adapt]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("adapt")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break;   
+                case "recent":
+                    var getImport = document.querySelector('link[id=recent]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("recent")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break;   
+                case "thereport":
+                    var getImport = document.querySelector('link[id=thereport]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("thereport")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break;
+                case "thedateline":
+                    var getImport = document.querySelector('link[id=thedateline]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("thedateline")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break;
+                case "contacts":
+                    var getImport = document.querySelector('link[id=contacts]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("contacts")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break; 
+                case "locations":
+                    var getImport = document.querySelector('link[id=locations]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("locations")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break;
+                case "request":
+                    var getImport = document.querySelector('link[id=request]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("request")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break;
+                case "restaurants":
+                    var getImport = document.querySelector('link[id=restaurants]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("restaurants")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break;
+                case "faq":
+                    var getImport = document.querySelector('link[id=faq]');
+                    var getDoc = getImport.import;
+                    var newHTML= getDoc.getElementsByClassName("faq")[0].innerHTML;
+                    document.getElementById("content-container").innerHTML = newHTML;
+                    break;   
+                default:
+                    alert("content switch error!");
+                    alert(sessionStorage.getItem("location"));
+                    break;
+            
+            }
+        }
+    </script>
+</div>
