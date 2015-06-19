@@ -2,7 +2,7 @@
 <head>
 <script type="text/javascript">
 //sessionStorage.setItem("location","home");
-if(sessionStorage.getItem("location")===null){
+if(sessionStorage.getItem("location")===null){thereport
     sessionStorage.setItem("location","home");
 }else{
     
@@ -17,12 +17,23 @@ var bgColor = "blue";
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link  rel="import" href="nav.html" id="navbar">
     <link  rel="import" href="Home.html" id="home">
+    <link  rel="import" href="faq.html" id="faq">
+    <link  rel="import" href="eap.html" id="eap">
     <link  rel="import" href="Photos.html" id="photos">
     <link  rel="import" href="Calendar.html" id="calendar">
     <link  rel="import" href="Leadership.html" id="leadership">
     <link  rel="import" href="Benefits.html" id="benefits">
-    <link  rel="import" href="Photos.html" id="photos">
-    <link  rel="import" href="Calendar.html" id="calendar">
+    <link  rel="import" href="Committees.html" id="committees">
+    <link  rel="import" href="adapt.html" id="adapt">
+    <link  rel="import" href="recent.html" id="recent">
+    <link  rel="import" href="thereport.html" id="thereport">
+    <link  rel="import" href="thedateline.html" id="thedateline">
+    <link  rel="import" href="contacts.html" id="contacts">
+    <link  rel="import" href="locations.html" id="locations">
+    <link  rel="import" href="request.html" id="request">
+    <link  rel="import" href="restaurants.html" id="restaurants">
+    <link  rel="import" href="faq.html" id="faq">
+    <link  rel="import" href="eap.html" id="eap">
 </head>
 <body>
     <!--Importing Navbar Element-->
@@ -60,12 +71,11 @@ var bgColor = "blue";
                 document.getElementById("content-container").innerHTML = newHTML;
                 break;
             default:
-                alert("content switch error!");
-                alert(sessionStorage.getItem("location"));
+                alert("homepage build error!");
                 break;    
             }
         </script>
-        <input type="button" value="photos" onclick="newPage(this.value); "/>
+      
     </div>
 
     <script type="text/javascript">
@@ -107,23 +117,72 @@ var bgColor = "blue";
                 var newHTML= getDoc.getElementsByClassName("calendar")[0].innerHTML;
                 document.getElementById("content-container").innerHTML = newHTML;
                 break;
-                  case "home":
-                var getImport = document.querySelector('link[id=home]');
+            case "committees":
+                var getImport = document.querySelector('link[id=committees]');
                 var getDoc = getImport.import;
-                var newHTML= getDoc.getElementsByClassName("home")[0].innerHTML;
+                var newHTML= getDoc.getElementsByClassName("committees")[0].innerHTML;
                 document.getElementById("content-container").innerHTML = newHTML;
                 break;
-            case "photos":
-                var getImport = document.querySelector('link[id=photos]');
+            case "eap":
+                var getImport = document.querySelector('link[id=eap]');
                 var getDoc = getImport.import;
-                var newHTML= getDoc.getElementsByClassName("photos")[0].innerHTML;
+                var newHTML= getDoc.getElementsByClassName("eapeap")[0].innerHTML;
+                document.getElementById("content-container").inneaperHTML = newHTML;
+                alert("eap");
+                break;
+            case "adapt":
+                var getImport = document.querySelector('link[id=adapt]');
+                var getDoc = getImport.import;
+                var newHTML= getDoc.getElementsByClassName("adapt")[0].innerHTML;
+                document.getElementById("content-container").innerHTML = newHTML;
+                break;   
+            case "recent":
+                var getImport = document.querySelector('link[id=recent]');
+                var getDoc = getImport.import;
+                var newHTML= getDoc.getElementsByClassName("recent")[0].innerHTML;
+                document.getElementById("content-container").innerHTML = newHTML;
+                break;   
+            case "thereport":
+                var getImport = document.querySelector('link[id=thereport]');
+                var getDoc = getImport.import;
+                var newHTML= getDoc.getElementsByClassName("thereport")[0].innerHTML;
                 document.getElementById("content-container").innerHTML = newHTML;
                 break;
-            case "calendar":
-                var getImport = document.querySelector('link[id=calendar]');
+            case "thedateline":
+                var getImport = document.querySelector('link[id=thedateline]');
                 var getDoc = getImport.import;
-                var newHTML= getDoc.getElementsByClassName("calendar")[0].innerHTML;
+                var newHTML= getDoc.getElementsByClassName("thedateline")[0].innerHTML;
                 document.getElementById("content-container").innerHTML = newHTML;
+                break;
+            case "contacts":
+                var getImport = document.querySelector('link[id=contacts]');
+                var getDoc = getImport.import;
+                var newHTML= getDoc.getElementsByClassName("contacts")[0].innerHTML;
+                document.getElementById("content-container").innerHTML = newHTML;
+                break; 
+            case "locations":
+                var getImport = document.querySelector('link[id=locations]');
+                var getDoc = getImport.import;
+                var newHTML= getDoc.getElementsByClassName("locations")[0].innerHTML;
+                document.getElementById("content-container").innerHTML = newHTML;
+                break;
+            case "request":
+                var getImport = document.querySelector('link[id=request]');
+                var getDoc = getImport.import;
+                var newHTML= getDoc.getElementsByClassName("request")[0].innerHTML;
+                document.getElementById("content-container").innerHTML = newHTML;
+                break;
+            case "restaurants":
+                var getImport = document.querySelector('link[id=restaurants]');
+                var getDoc = getImport.import;
+                var newHTML= getDoc.getElementsByClassName("restaurants")[0].innerHTML;
+                document.getElementById("content-container").innerHTML = newHTML;
+                break;
+            case "faq":
+                var getImport = document.querySelector('link[id=faq]');
+                var getDoc = getImport.import;
+                var newHTML= getDoc.getElementsByClassName("faq")[0].innerHTML;
+                document.getElementById("content-container").inneaperHTML = newHTML;
                 break;   
             default:
                 alert("content switch error!");
